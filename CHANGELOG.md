@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## [0.1.0] - 2024-10-23
 
-Initial 1.20.1 release!
+Initial 1.21.1 release!
+
+<!-- Versions -->
+[0.1.0]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases/tag/v1.21.1-neoforge-0.1.0
