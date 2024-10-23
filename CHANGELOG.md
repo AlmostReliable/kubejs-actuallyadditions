@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+- /
+
 ## [0.1.0] - 2024-10-23
 
 Initial 1.21.1 release!
