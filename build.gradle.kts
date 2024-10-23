@@ -16,6 +16,9 @@ repositories {
         }
     }
 
+    // CurseMaven (Actually Additions)
+    maven("https://cursemaven.com")
+
     mavenLocal()
 }
 
@@ -24,7 +27,8 @@ dependencies {
     implementation("dev.latvian.mods:kubejs-neoforge:${almostgradle.getProperty("kjsVersion")}")
 
     // Actually Additions
-    implementation("de.ellpeck.actuallyadditions:ActuallyAdditions:${almostgradle.getProperty("aaVersion")}+mc${almostgradle.minecraftVersion}") {
-        isTransitive = false
-    }
+    implementation("curse.maven:actually-additions-228404:5835183") // 1.3.6
+    // implementation("de.ellpeck.actuallyadditions:ActuallyAdditions:${almostgradle.getProperty("aaVersion")}+mc${almostgradle.minecraftVersion}") {
+    //     isTransitive = false
+    // }
 }
