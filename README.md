@@ -51,7 +51,7 @@ Redistribution of builds or rehosting is strictly prohibited.
 [kubejs]: https://github.com/KubeJS-Mods/KubeJS
 [actually additions]: https://github.com/Ellpeck/ActuallyAdditions
 [discord]: https://discord.com/invite/ThFnwZCyYY
-[wiki]: https://github.com/AlmostReliable/kubejs-actuallyadditions/wiki
+[wiki]: https://docs.almostreliable.com/kubejs-actuallyadditions/
 [curseforge]: https://www.curseforge.com/minecraft/mc-mods/kubejs-actually-additions
 [modrinth]: https://modrinth.com/mod/kubejs-actually-additions
 [releases]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases
