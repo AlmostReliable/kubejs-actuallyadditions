@@ -1,0 +1,42 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+issueTrackerURL = "https://github.com/${githubUser}/${githubRepo}/issues"
+license = "${license}"
+
+[[mixins]]
+config = "${modId}.mixins.json"
+
+[[mods]]
+modId = "${modId}"
+version = "${version}"
+displayName = "${modName}"
+authors = "${modAuthor}"
+description = '''${modDescription}'''
+
+[[dependencies."${modId}"]]
+modId = "minecraft"
+type = "REQUIRED"
+versionRange = "[${minecraftVersion},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."${modId}"]]
+modId = "neoforge"
+type = "REQUIRED"
+versionRange = "[${neoforgeVersion},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."${modId}"]]
+modId = "kubejs"
+type = "REQUIRED"
+versionRange = "[${kjsVersion},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${modId}"]]
+modId = "actuallyadditions"
+type = "REQUIRED"
+versionRange = "[${aaVersion},)"
+ordering = "AFTER"
+side = "BOTH"

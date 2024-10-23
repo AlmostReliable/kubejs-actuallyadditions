@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8.5",
+  "package": "com.almostreliable.kubeaa.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "CrushingRecipeSerializerAccessor",
+    "TileEntityEmpowererMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
