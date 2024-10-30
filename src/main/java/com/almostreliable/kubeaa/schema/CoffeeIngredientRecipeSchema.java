@@ -26,11 +26,13 @@ public interface CoffeeIngredientRecipeSchema {
         .key("ingredient", ComponentRole.INPUT)
         .noFunctions();
     RecipeKey<Integer> MAX_AMPLIFIER = NumberComponent.INT
-        .key("maxAmplifier", ComponentRole.OTHER)
+        .key("max_amplifier", ComponentRole.OTHER)
+        .functionNames(List.of("maxAmplifier"))
         .optional(1)
         .alwaysWrite();
     RecipeKey<String> EXTRA_TEXT = StringComponent.ANY
-        .key("extraText", ComponentRole.OTHER)
+        .key("extra_text", ComponentRole.OTHER)
+        .functionNames(List.of("extraText"))
         .optional("")
         .allowEmpty();
 
