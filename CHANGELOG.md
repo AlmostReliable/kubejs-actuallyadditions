@@ -3,7 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased
-- /
+
+- switched to the official maven artifacts
 
 ## [0.2.0] - 2024-10-24
 
