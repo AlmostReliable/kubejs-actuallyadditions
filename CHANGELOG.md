@@ -5,7 +5,9 @@ All notable changes to this project will be documented in this file.
 ## Unreleased
 
 - switched to the official maven artifacts
+- switched to strict single item stack component in laser recipes
 - updated coffee ingredient recipe keys
+- updated minimum Actually Additions version to 1.3.7
 
 ## [0.2.0] - 2024-10-24
 

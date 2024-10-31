@@ -4,6 +4,7 @@ import com.almostreliable.kubeaa.binding.CrushingResultBinding;
 import com.almostreliable.kubeaa.binding.EffectInstanceBinding;
 import com.almostreliable.kubeaa.component.CrusherResultComponent;
 import com.almostreliable.kubeaa.component.EffectInstanceComponent;
+import com.almostreliable.kubeaa.component.SingleItemStackComponent;
 import com.almostreliable.kubeaa.event.EmpowerEvent;
 import com.almostreliable.kubeaa.recipe.*;
 import com.almostreliable.kubeaa.schema.*;
@@ -39,6 +40,7 @@ public class KubePlugin implements KubeJSPlugin {
     public void registerRecipeComponents(RecipeComponentFactoryRegistry registry) {
         registry.register(CrusherResultComponent.CRUSHING_RESULT);
         registry.register(EffectInstanceComponent.EFFECT_INSTANCE);
+        registry.register(SingleItemStackComponent.STRICT_SINGLE_ITEM);
     }
 
     @Override
