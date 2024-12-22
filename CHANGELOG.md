@@ -3,7 +3,9 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased
-- /
+
+- fixed crash with new Actually Additions version
+- updated minimum Actually Additions version to 1.3.12
 
 ## [0.2.1] - 2024-10-31
 

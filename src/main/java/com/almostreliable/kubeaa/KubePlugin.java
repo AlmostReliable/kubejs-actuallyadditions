@@ -66,8 +66,7 @@ public class KubePlugin implements KubeJSPlugin {
             CoffeeIngredientRecipe.NAME, CoffeeIngredientRecipeSchema.SCHEMA,
             ColorChangeRecipe.NAME, ColorChangeRecipeSchema.SCHEMA,
             LiquidFuelRecipe.NAME, LiquidFuelRecipeSchema.SCHEMA,
-            MiningLensRecipe.NAME, MiningLensRecipeSchema.SCHEMA,
-            SolidFuelRecipe.NAME, SolidFuelRecipeSchema.SCHEMA
+            MiningLensRecipe.NAME, MiningLensRecipeSchema.SCHEMA
         );
 
         RecipeNamespace namespace = registry.namespace(ActuallyAdditionsAPI.MOD_ID);
