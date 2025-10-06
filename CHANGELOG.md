@@ -3,7 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased
-- /
+
+- fixed coffee ingredient effects not being optional
 
 ## [0.2.2] - 2024-12-22
 

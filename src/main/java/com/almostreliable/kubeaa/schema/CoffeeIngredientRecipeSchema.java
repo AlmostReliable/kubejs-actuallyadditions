@@ -18,12 +18,14 @@ import java.util.List;
  */
 public interface CoffeeIngredientRecipeSchema {
 
+    RecipeKey<Ingredient> INGREDIENT = IngredientComponent.NON_EMPTY_INGREDIENT
+        .key("ingredient", ComponentRole.INPUT)
+        .noFunctions();
     RecipeKey<List<CoffeeIngredientRecipe.EffectInstance>> EFFECTS = EffectInstanceComponent.EFFECT_INSTANCE
         .asList()
         .key("effects", ComponentRole.OTHER)
-        .noFunctions();
-    RecipeKey<Ingredient> INGREDIENT = IngredientComponent.NON_EMPTY_INGREDIENT
-        .key("ingredient", ComponentRole.INPUT)
+        .optional(List.of())
+        .allowEmpty()
         .noFunctions();
     RecipeKey<Integer> MAX_AMPLIFIER = NumberComponent.INT
         .key("max_amplifier", ComponentRole.OTHER)
@@ -36,5 +38,5 @@ public interface CoffeeIngredientRecipeSchema {
         .optional("")
         .allowEmpty();
 
-    RecipeSchema SCHEMA = new RecipeSchema(EFFECTS, INGREDIENT, MAX_AMPLIFIER, EXTRA_TEXT);
+    RecipeSchema SCHEMA = new RecipeSchema(INGREDIENT, EFFECTS, MAX_AMPLIFIER, EXTRA_TEXT);
 }
