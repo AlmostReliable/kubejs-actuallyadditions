@@ -11,6 +11,7 @@ A [Minecraft] mod to add [KubeJS] integration to [Actually Additions].
 [![Total Downloads CF][total_downloads_cf_badge]][curseforge]
 [![Total Downloads MR][total_downloads_mr_badge]][modrinth]
 
+[![Workflow Status][workflow_status_badge]][workflow_status_link]
 ![License][license_badge]
 [![Discord][discord_badge]][discord]
 [![Wiki][wiki_badge]][wiki]
@@ -35,24 +36,26 @@ intended for private use or as a fallback if CurseForge and Modrinth are unavail
 
 Redistribution of builds or rehosting is strictly prohibited.
 
-<!-- Badges -->
-[workflow_status_badge]: https://img.shields.io/github/actions/workflow/status/AlmostReliable/kubejs-actuallyadditions/build.yml?branch=1.21.1&style=for-the-badge
-[workflow_status_link]: https://github.com/AlmostReliable/kubejs-actuallyadditions/actions
+<!-- Badge Images -->
+[version_badge]: https://img.shields.io/github/v/release/almostreliable/kubejs-actuallyadditions?include_prereleases&filter=v1.21.1-*&style=for-the-badge&logo=github&color=%23181717
+[total_downloads_cf_badge]: https://img.shields.io/curseforge/dt/1126546?style=for-the-badge&logo=curseforge&label=CurseForge&color=%23F16436
+[total_downloads_mr_badge]: https://img.shields.io/modrinth/dt/9UjcQ49t?style=for-the-badge&logo=modrinth&label=Modrinth&color=%2300AF5C
+[workflow_status_badge]: https://img.shields.io/github/actions/workflow/status/almostreliable/kubejs-actuallyadditions/build.yml?branch=1.21.1&style=for-the-badge
 [license_badge]: https://img.shields.io/badge/License-ARR-ffa200?style=for-the-badge
-[version_badge]: https://img.shields.io/badge/dynamic/json?color=0078FF&label=release&style=for-the-badge&query=name&url=https://api.razonyang.com/v1/github/tag/AlmostReliable/kubejs-actuallyadditions%3Fprefix=v1.21.1-
-[version_link]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases/latest
-[total_downloads_cf_badge]: https://img.shields.io/badge/dynamic/json?color=e04e14&label=CurseForge&style=for-the-badge&query=downloads.total&url=https%3A%2F%2Fapi.cfwidget.com%2F1126546&logo=curseforge
-[total_downloads_mr_badge]: https://img.shields.io/modrinth/dt/9UjcQ49t?color=5da545&label=Modrinth&style=for-the-badge&logo=modrinth
 [discord_badge]: https://img.shields.io/discord/917251858974789693?color=5865f2&label=Discord&logo=discord&style=for-the-badge
 [wiki_badge]: https://img.shields.io/badge/Read%20the-Wiki-ba00ff?style=for-the-badge
+
+<!-- Badge Links -->
+[version_link]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases/latest
+[curseforge]: https://www.curseforge.com/minecraft/mc-mods/kubejs-actually-additions
+[modrinth]: https://modrinth.com/mod/kubejs-actually-additions
+[workflow_status_link]: https://github.com/AlmostReliable/kubejs-actuallyadditions/actions
+[discord]: https://discord.com/invite/ThFnwZCyYY
+[wiki]: https://docs.almostreliable.com/kubejs-actuallyadditions/
 
 <!-- Links -->
 [minecraft]: https://www.minecraft.net/
 [kubejs]: https://github.com/KubeJS-Mods/KubeJS
 [actually additions]: https://github.com/Ellpeck/ActuallyAdditions
-[discord]: https://discord.com/invite/ThFnwZCyYY
-[wiki]: https://docs.almostreliable.com/kubejs-actuallyadditions/
-[curseforge]: https://www.curseforge.com/minecraft/mc-mods/kubejs-actually-additions
-[modrinth]: https://modrinth.com/mod/kubejs-actually-additions
 [releases]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases
 [neoforge]: https://neoforged.net/
