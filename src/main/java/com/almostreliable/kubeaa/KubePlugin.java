@@ -14,7 +14,11 @@ import dev.latvian.mods.kubejs.event.EventGroup;
 import dev.latvian.mods.kubejs.event.EventGroupRegistry;
 import dev.latvian.mods.kubejs.event.EventHandler;
 import dev.latvian.mods.kubejs.plugin.KubeJSPlugin;
-import dev.latvian.mods.kubejs.recipe.schema.*;
+import dev.latvian.mods.kubejs.recipe.component.RecipeComponentTypeRegistry;
+import dev.latvian.mods.kubejs.recipe.schema.RecipeFactoryRegistry;
+import dev.latvian.mods.kubejs.recipe.schema.RecipeNamespace;
+import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
+import dev.latvian.mods.kubejs.recipe.schema.RecipeSchemaRegistry;
 import dev.latvian.mods.kubejs.script.BindingRegistry;
 import net.minecraft.world.effect.MobEffects;
 
@@ -37,10 +41,10 @@ public class KubePlugin implements KubeJSPlugin {
     }
 
     @Override
-    public void registerRecipeComponents(RecipeComponentFactoryRegistry registry) {
-        registry.register(CrusherResultComponent.CRUSHING_RESULT);
-        registry.register(EffectInstanceComponent.EFFECT_INSTANCE);
-        registry.register(SingleItemStackComponent.STRICT_SINGLE_ITEM);
+    public void registerRecipeComponents(RecipeComponentTypeRegistry registry) {
+        registry.register(CrusherResultComponent.TYPE);
+        registry.register(EffectInstanceComponent.TYPE);
+        registry.register(SingleItemStackComponent.TYPE);
     }
 
     @Override

@@ -16,10 +16,10 @@ import net.minecraft.world.item.crafting.Ingredient;
  */
 public interface LaserRecipeSchema {
 
-    RecipeKey<ItemStack> RESULT = SingleItemStackComponent.STRICT_SINGLE_ITEM
+    RecipeKey<ItemStack> RESULT = SingleItemStackComponent.TYPE
         .key("result", ComponentRole.OUTPUT)
         .noFunctions();
-    RecipeKey<Ingredient> INGREDIENT = IngredientComponent.NON_EMPTY_INGREDIENT
+    RecipeKey<Ingredient> INGREDIENT = IngredientComponent.INGREDIENT
         .key("ingredient", ComponentRole.INPUT)
         .noFunctions();
     RecipeKey<Integer> ENERGY = NumberComponent.INT

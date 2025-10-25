@@ -17,9 +17,10 @@ import net.neoforged.neoforge.fluids.FluidStack;
 public interface PressRecipeSchema {
 
     RecipeKey<FluidStack> FLUID = FluidStackComponent.FLUID_STACK
+        .instance()
         .key("fluid", ComponentRole.OUTPUT)
         .noFunctions();
-    RecipeKey<Ingredient> INGREDIENT = IngredientComponent.NON_EMPTY_INGREDIENT
+    RecipeKey<Ingredient> INGREDIENT = IngredientComponent.INGREDIENT
         .key("ingredient", ComponentRole.INPUT)
         .noFunctions();
 

@@ -1,19 +1,14 @@
 package com.almostreliable.kubeaa.component;
 
-import com.mojang.serialization.Codec;
+import com.almostreliable.kubeaa.ModInitializer;
 import dev.latvian.mods.kubejs.recipe.component.ItemStackComponent;
+import dev.latvian.mods.kubejs.recipe.component.RecipeComponentType;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
 
-public final class SingleItemStackComponent extends ItemStackComponent {
-
-    public static final SingleItemStackComponent STRICT_SINGLE_ITEM = new SingleItemStackComponent();
-
-    private SingleItemStackComponent() {
-        super("strict_single_item", ItemStack.STRICT_SINGLE_ITEM_CODEC);
-    }
-
-    @Override
-    public Codec<ItemStack> codec() {
-        return ItemStack.STRICT_SINGLE_ITEM_CODEC;
-    }
+public final class SingleItemStackComponent {
+    public static final RecipeComponentType<ItemStack> TYPE = RecipeComponentType.unit(
+        ModInitializer.getRL("single_item"),
+        type -> new ItemStackComponent(type, ItemStack.STRICT_SINGLE_ITEM_CODEC, false, Ingredient.EMPTY)
+    );
 }
