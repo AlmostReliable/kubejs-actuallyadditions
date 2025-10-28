@@ -3,7 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased
-- /
+
+- updated to KubeJS 7.2 ([max](https://github.com/MaxNeedsSnacks)@[#4](https://github.com/AlmostReliable/kubejs-actuallyadditions/pull/4))
 
 ## [0.2.3] - 2025-10-06
 
