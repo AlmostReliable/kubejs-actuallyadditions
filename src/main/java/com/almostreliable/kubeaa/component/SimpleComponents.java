@@ -6,9 +6,12 @@ import dev.latvian.mods.kubejs.recipe.component.RecipeComponentType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public final class SingleItemStackComponent {
-    public static final RecipeComponentType<ItemStack> TYPE = RecipeComponentType.unit(
+public final class SimpleComponents {
+
+    public static final RecipeComponentType<ItemStack> SINGLE_ITEM_STACK = RecipeComponentType.unit(
         ModInitializer.getRL("single_item"),
         type -> new ItemStackComponent(type, ItemStack.STRICT_SINGLE_ITEM_CODEC, false, Ingredient.EMPTY)
     );
+
+    private SimpleComponents() {}
 }

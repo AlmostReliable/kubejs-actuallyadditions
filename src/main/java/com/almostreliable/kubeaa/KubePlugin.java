@@ -4,7 +4,7 @@ import com.almostreliable.kubeaa.binding.CrushingResultBinding;
 import com.almostreliable.kubeaa.binding.EffectInstanceBinding;
 import com.almostreliable.kubeaa.component.CrusherResultComponent;
 import com.almostreliable.kubeaa.component.EffectInstanceComponent;
-import com.almostreliable.kubeaa.component.SingleItemStackComponent;
+import com.almostreliable.kubeaa.component.SimpleComponents;
 import com.almostreliable.kubeaa.event.EmpowerEvent;
 import com.almostreliable.kubeaa.recipe.FermenterKubeRecipe;
 import com.almostreliable.kubeaa.recipe.LiquidFuelKubeRecipe;
@@ -46,7 +46,7 @@ public class KubePlugin implements KubeJSPlugin {
     public void registerRecipeComponents(RecipeComponentTypeRegistry registry) {
         registry.register(CrusherResultComponent.TYPE);
         registry.register(EffectInstanceComponent.TYPE);
-        registry.register(SingleItemStackComponent.TYPE);
+        registry.register(SimpleComponents.SINGLE_ITEM_STACK);
     }
 
     @Override
