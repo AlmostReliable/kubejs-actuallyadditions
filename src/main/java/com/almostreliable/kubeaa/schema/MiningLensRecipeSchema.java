@@ -16,10 +16,10 @@ import net.minecraft.world.item.crafting.Ingredient;
  */
 public interface MiningLensRecipeSchema {
 
-    RecipeKey<ItemStack> RESULT = ItemStackComponent.STRICT_ITEM_STACK
+    RecipeKey<ItemStack> RESULT = ItemStackComponent.ITEM_STACK
         .key("result", ComponentRole.OUTPUT)
         .noFunctions();
-    RecipeKey<Ingredient> INGREDIENT = IngredientComponent.NON_EMPTY_INGREDIENT
+    RecipeKey<Ingredient> INGREDIENT = IngredientComponent.INGREDIENT
         .key("ingredient", ComponentRole.INPUT)
         .noFunctions();
     RecipeKey<Integer> WEIGHT = NumberComponent.INT

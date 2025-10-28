@@ -1,44 +1,47 @@
 package com.almostreliable.kubeaa.component;
 
+import com.almostreliable.kubeaa.ModInitializer;
 import com.almostreliable.kubeaa.binding.CrushingResultBinding;
 import com.almostreliable.kubeaa.mixin.CrushingRecipeSerializerAccessor;
 import com.mojang.serialization.Codec;
-import de.ellpeck.actuallyadditions.mod.crafting.CrushingRecipe;
-import dev.latvian.mods.kubejs.item.ItemStackJS;
-import dev.latvian.mods.kubejs.recipe.KubeRecipe;
+import de.ellpeck.actuallyadditions.mod.crafting.CrushingRecipe.CrushingResult;
+import dev.latvian.mods.kubejs.plugin.builtin.wrapper.ItemWrapper;
+import dev.latvian.mods.kubejs.recipe.RecipeScriptContext;
 import dev.latvian.mods.kubejs.recipe.component.RecipeComponent;
-import dev.latvian.mods.kubejs.script.KubeJSContext;
-import dev.latvian.mods.kubejs.util.RegistryAccessContainer;
-import dev.latvian.mods.rhino.Context;
+import dev.latvian.mods.kubejs.recipe.component.RecipeComponentType;
 import dev.latvian.mods.rhino.type.TypeInfo;
 import net.minecraft.world.item.ItemStack;
 
-public record CrusherResultComponent() implements RecipeComponent<CrushingRecipe.CrushingResult> {
+public record CrusherResultComponent(RecipeComponentType<?> type) implements RecipeComponent<CrushingResult> {
 
-    public static final RecipeComponent<CrushingRecipe.CrushingResult> CRUSHING_RESULT = new CrusherResultComponent();
+    public static final RecipeComponentType<CrushingResult> TYPE = RecipeComponentType.unit(
+        ModInitializer.getRL("crushing_result"),
+        CrusherResultComponent::new
+    );
 
     @Override
-    public Codec<CrushingRecipe.CrushingResult> codec() {
+    public Codec<CrushingResult> codec() {
         return CrushingRecipeSerializerAccessor.getCodec();
     }
 
     @Override
     public TypeInfo typeInfo() {
-        return TypeInfo.of(CrushingRecipe.CrushingResult.class).or(ItemStackJS.TYPE_INFO);
+        return TypeInfo.of(CrushingResult.class).or(ItemWrapper.TYPE_INFO);
     }
 
     @Override
-    public CrushingRecipe.CrushingResult wrap(Context cx, KubeRecipe recipe, Object from) {
-        if (from instanceof CrushingRecipe.CrushingResult r) {
+    public CrushingResult wrap(RecipeScriptContext cx, Object from) {
+        if (from instanceof CrushingResult r) {
             return r;
         }
 
-        RegistryAccessContainer registryAccess = ((KubeJSContext) cx).getRegistries();
-        ItemStack stack = ItemStackJS.wrap(registryAccess, from);
-        if (stack.isEmpty()) {
-            throw new IllegalArgumentException("empty crushing result: " + from);
-        }
+        ItemStack stack = ItemWrapper.wrap(cx.cx(), from);
 
-        return CrushingResultBinding.of(stack);
+        return stack.isEmpty() ? CrushingResult.EMPTY : CrushingResultBinding.of(stack);
+    }
+
+    @Override
+    public boolean isEmpty(CrushingResult value) {
+        return value == CrushingResult.EMPTY || value.stack().isEmpty();
     }
 }

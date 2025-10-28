@@ -4,9 +4,11 @@ import com.almostreliable.kubeaa.binding.CrushingResultBinding;
 import com.almostreliable.kubeaa.binding.EffectInstanceBinding;
 import com.almostreliable.kubeaa.component.CrusherResultComponent;
 import com.almostreliable.kubeaa.component.EffectInstanceComponent;
-import com.almostreliable.kubeaa.component.SingleItemStackComponent;
+import com.almostreliable.kubeaa.component.SimpleComponents;
 import com.almostreliable.kubeaa.event.EmpowerEvent;
-import com.almostreliable.kubeaa.recipe.*;
+import com.almostreliable.kubeaa.recipe.FermenterKubeRecipe;
+import com.almostreliable.kubeaa.recipe.LiquidFuelKubeRecipe;
+import com.almostreliable.kubeaa.recipe.PressKubeRecipe;
 import com.almostreliable.kubeaa.schema.*;
 import de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI;
 import de.ellpeck.actuallyadditions.mod.crafting.*;
@@ -14,7 +16,11 @@ import dev.latvian.mods.kubejs.event.EventGroup;
 import dev.latvian.mods.kubejs.event.EventGroupRegistry;
 import dev.latvian.mods.kubejs.event.EventHandler;
 import dev.latvian.mods.kubejs.plugin.KubeJSPlugin;
-import dev.latvian.mods.kubejs.recipe.schema.*;
+import dev.latvian.mods.kubejs.recipe.component.RecipeComponentTypeRegistry;
+import dev.latvian.mods.kubejs.recipe.schema.RecipeFactoryRegistry;
+import dev.latvian.mods.kubejs.recipe.schema.RecipeNamespace;
+import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
+import dev.latvian.mods.kubejs.recipe.schema.RecipeSchemaRegistry;
 import dev.latvian.mods.kubejs.script.BindingRegistry;
 import net.minecraft.world.effect.MobEffects;
 
@@ -37,16 +43,14 @@ public class KubePlugin implements KubeJSPlugin {
     }
 
     @Override
-    public void registerRecipeComponents(RecipeComponentFactoryRegistry registry) {
-        registry.register(CrusherResultComponent.CRUSHING_RESULT);
-        registry.register(EffectInstanceComponent.EFFECT_INSTANCE);
-        registry.register(SingleItemStackComponent.STRICT_SINGLE_ITEM);
+    public void registerRecipeComponents(RecipeComponentTypeRegistry registry) {
+        registry.register(CrusherResultComponent.TYPE);
+        registry.register(EffectInstanceComponent.TYPE);
+        registry.register(SimpleComponents.SINGLE_ITEM_STACK);
     }
 
     @Override
     public void registerRecipeFactories(RecipeFactoryRegistry registry) {
-        registry.register(CrusherKubeRecipe.FACTORY);
-        registry.register(EmpowererKubeRecipe.FACTORY);
         registry.register(FermenterKubeRecipe.FACTORY);
         registry.register(LiquidFuelKubeRecipe.FACTORY);
         registry.register(PressKubeRecipe.FACTORY);

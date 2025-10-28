@@ -1,6 +1,6 @@
 package com.almostreliable.kubeaa.schema;
 
-import com.almostreliable.kubeaa.component.SingleItemStackComponent;
+import com.almostreliable.kubeaa.component.SimpleComponents;
 import de.ellpeck.actuallyadditions.data.LaserRecipeGenerator;
 import de.ellpeck.actuallyadditions.mod.crafting.LaserRecipe;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
@@ -16,10 +16,10 @@ import net.minecraft.world.item.crafting.Ingredient;
  */
 public interface LaserRecipeSchema {
 
-    RecipeKey<ItemStack> RESULT = SingleItemStackComponent.STRICT_SINGLE_ITEM
+    RecipeKey<ItemStack> RESULT = SimpleComponents.SINGLE_ITEM_STACK
         .key("result", ComponentRole.OUTPUT)
         .noFunctions();
-    RecipeKey<Ingredient> INGREDIENT = IngredientComponent.NON_EMPTY_INGREDIENT
+    RecipeKey<Ingredient> INGREDIENT = IngredientComponent.INGREDIENT
         .key("ingredient", ComponentRole.INPUT)
         .noFunctions();
     RecipeKey<Integer> ENERGY = NumberComponent.INT
