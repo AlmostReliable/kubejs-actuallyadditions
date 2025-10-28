@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased
+- /
+
+## [0.3.0] - 2025-10-28
 
 - updated to KubeJS 7.2 ([max](https://github.com/MaxNeedsSnacks)@[#4](https://github.com/AlmostReliable/kubejs-actuallyadditions/pull/4))
 
@@ -31,6 +34,7 @@ All notable changes to this project will be documented in this file.
 Initial 1.21.1 release!
 
 <!-- Versions -->
+[0.3.0]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases/tag/v1.21.1-neoforge-0.3.0
 [0.2.3]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases/tag/v1.21.1-neoforge-0.2.3
 [0.2.2]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases/tag/v1.21.1-neoforge-0.2.2
 [0.2.1]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases/tag/v1.21.1-neoforge-0.2.1
