@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased
+- /
+
+## [0.4.0] - 2026-11-19
 
 - added validation for empowerer recipes with fewer than 4 modifiers
 - added validation for values that crash Actually Additions: zero empowerer, fermenter, and liquid fuel times, zero laser energy, and negative mining lens weights
@@ -41,6 +44,7 @@ All notable changes to this project will be documented in this file.
 Initial 1.21.1 release!
 
 <!-- Versions -->
+[0.4.0]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases/tag/v1.21.1-neoforge-0.4.0
 [0.3.0]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases/tag/v1.21.1-neoforge-0.3.0
 [0.2.3]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases/tag/v1.21.1-neoforge-0.2.3
 [0.2.2]: https://github.com/AlmostReliable/kubejs-actuallyadditions/releases/tag/v1.21.1-neoforge-0.2.2
