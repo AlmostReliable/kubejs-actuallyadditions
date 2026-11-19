@@ -3,7 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased
-- /
+
+- fixed the fermenter fluid ingredient being treated as an output by recipe filters and replacements
 
 ## [0.3.0] - 2025-10-28
 

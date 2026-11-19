@@ -21,7 +21,7 @@ public interface FermenterRecipeSchema {
         .key("result", ComponentRole.OUTPUT)
         .noFunctions();
     RecipeKey<FluidStack> INGREDIENT = FluidStackComponent.FLUID_STACK
-        .key("ingredient", ComponentRole.OUTPUT)
+        .key("ingredient", ComponentRole.INPUT)
         .noFunctions();
     RecipeKey<Integer> TIME = NumberComponent.INT
         .key("time", ComponentRole.OTHER)

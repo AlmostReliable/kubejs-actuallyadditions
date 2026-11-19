@@ -23,7 +23,7 @@ public interface LiquidFuelRecipeSchema {
         .key("fuel", ComponentRole.INPUT)
         .noFunctions();
     RecipeKey<Integer> TOTAL_ENERGY = NumberComponent.INT
-        .key("total_energy", ComponentRole.INPUT)
+        .key("total_energy", ComponentRole.OTHER)
         .functionNames(List.of("energy"))
         .optional(1_000)
         .alwaysWrite();
