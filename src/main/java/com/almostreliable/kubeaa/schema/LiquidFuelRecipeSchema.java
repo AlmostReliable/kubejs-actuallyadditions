@@ -1,6 +1,7 @@
 package com.almostreliable.kubeaa.schema;
 
 import com.almostreliable.kubeaa.recipe.LiquidFuelKubeRecipe;
+
 import de.ellpeck.actuallyadditions.data.FuelRecipeGenerator;
 import de.ellpeck.actuallyadditions.mod.crafting.LiquidFuelRecipe;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
@@ -8,6 +9,7 @@ import dev.latvian.mods.kubejs.recipe.component.ComponentRole;
 import dev.latvian.mods.kubejs.recipe.component.FluidStackComponent;
 import dev.latvian.mods.kubejs.recipe.component.NumberComponent;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
+
 import net.neoforged.neoforge.fluids.FluidStack;
 
 import java.util.List;

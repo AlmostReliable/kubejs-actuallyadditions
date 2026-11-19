@@ -1,8 +1,10 @@
 package com.almostreliable.kubeaa.component;
 
 import com.almostreliable.kubeaa.ModInitializer;
+
 import dev.latvian.mods.kubejs.recipe.component.ItemStackComponent;
 import dev.latvian.mods.kubejs.recipe.component.RecipeComponentType;
+
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 

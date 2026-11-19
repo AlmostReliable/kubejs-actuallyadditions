@@ -10,6 +10,7 @@ import com.almostreliable.kubeaa.recipe.FermenterKubeRecipe;
 import com.almostreliable.kubeaa.recipe.LiquidFuelKubeRecipe;
 import com.almostreliable.kubeaa.recipe.PressKubeRecipe;
 import com.almostreliable.kubeaa.schema.*;
+
 import de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI;
 import de.ellpeck.actuallyadditions.mod.crafting.*;
 import dev.latvian.mods.kubejs.event.EventGroup;
@@ -22,6 +23,7 @@ import dev.latvian.mods.kubejs.recipe.schema.RecipeNamespace;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchemaRegistry;
 import dev.latvian.mods.kubejs.script.BindingRegistry;
+
 import net.minecraft.world.effect.MobEffects;
 
 import java.util.Map;
@@ -83,6 +85,7 @@ public class KubePlugin implements KubeJSPlugin {
     }
 
     public interface Events {
+
         EventGroup GROUP = EventGroup.of("ActuallyAdditionsEvents");
         EventHandler EMPOWER = GROUP.server("empower", () -> EmpowerEvent.class);
     }

@@ -3,16 +3,20 @@ package com.almostreliable.kubeaa.mixin;
 import com.almostreliable.kubeaa.KubePlugin;
 import com.almostreliable.kubeaa.event.EmpowerEvent;
 import com.almostreliable.kubeaa.extension.TileEntityEmpowererExtension;
+
 import com.llamalad7.mixinextras.sugar.Local;
 import de.ellpeck.actuallyadditions.mod.crafting.EmpowererRecipe;
 import de.ellpeck.actuallyadditions.mod.tile.TileEntityEmpowerer;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+
 import org.jetbrains.annotations.Nullable;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;

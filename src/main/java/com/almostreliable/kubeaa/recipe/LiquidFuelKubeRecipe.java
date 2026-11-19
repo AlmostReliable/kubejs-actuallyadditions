@@ -2,11 +2,13 @@ package com.almostreliable.kubeaa.recipe;
 
 import com.almostreliable.kubeaa.ModInitializer;
 import com.almostreliable.kubeaa.schema.LiquidFuelRecipeSchema;
+
 import de.ellpeck.actuallyadditions.mod.crafting.LiquidFuelRecipe;
 import dev.latvian.mods.kubejs.error.InvalidRecipeComponentValueException;
 import dev.latvian.mods.kubejs.recipe.KubeRecipe;
 import dev.latvian.mods.kubejs.recipe.component.RecipeValidationContext;
 import dev.latvian.mods.kubejs.recipe.schema.KubeRecipeFactory;
+
 import net.neoforged.neoforge.fluids.FluidStack;
 
 public class LiquidFuelKubeRecipe extends KubeRecipe {

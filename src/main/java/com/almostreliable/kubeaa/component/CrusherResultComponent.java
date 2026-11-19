@@ -3,6 +3,7 @@ package com.almostreliable.kubeaa.component;
 import com.almostreliable.kubeaa.ModInitializer;
 import com.almostreliable.kubeaa.binding.CrushingResultBinding;
 import com.almostreliable.kubeaa.mixin.CrushingRecipeSerializerAccessor;
+
 import com.mojang.serialization.Codec;
 import de.ellpeck.actuallyadditions.mod.crafting.CrushingRecipe.CrushingResult;
 import dev.latvian.mods.kubejs.plugin.builtin.wrapper.ItemWrapper;
@@ -10,6 +11,7 @@ import dev.latvian.mods.kubejs.recipe.RecipeScriptContext;
 import dev.latvian.mods.kubejs.recipe.component.RecipeComponent;
 import dev.latvian.mods.kubejs.recipe.component.RecipeComponentType;
 import dev.latvian.mods.rhino.type.TypeInfo;
+
 import net.minecraft.world.item.ItemStack;
 
 public record CrusherResultComponent(RecipeComponentType<?> type) implements RecipeComponent<CrushingResult> {

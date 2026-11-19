@@ -1,6 +1,7 @@
 package com.almostreliable.kubeaa.schema;
 
 import com.almostreliable.kubeaa.component.EffectInstanceComponent;
+
 import de.ellpeck.actuallyadditions.data.CoffeeIngredientGenerator;
 import de.ellpeck.actuallyadditions.mod.crafting.CoffeeIngredientRecipe;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
@@ -10,6 +11,7 @@ import dev.latvian.mods.kubejs.recipe.component.NumberComponent;
 import dev.latvian.mods.kubejs.recipe.component.StringComponent;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
 import dev.latvian.mods.kubejs.util.IntBounds;
+
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.List;

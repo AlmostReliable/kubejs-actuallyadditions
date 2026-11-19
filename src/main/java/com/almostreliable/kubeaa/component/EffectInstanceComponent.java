@@ -2,6 +2,7 @@ package com.almostreliable.kubeaa.component;
 
 import com.almostreliable.kubeaa.ModInitializer;
 import com.almostreliable.kubeaa.binding.EffectInstanceBinding;
+
 import com.mojang.serialization.Codec;
 import de.ellpeck.actuallyadditions.mod.crafting.CoffeeIngredientRecipe.EffectInstance;
 import dev.latvian.mods.kubejs.holder.HolderWrapper;
@@ -10,6 +11,7 @@ import dev.latvian.mods.kubejs.recipe.component.RecipeComponent;
 import dev.latvian.mods.kubejs.recipe.component.RecipeComponentType;
 import dev.latvian.mods.kubejs.util.Cast;
 import dev.latvian.mods.rhino.type.TypeInfo;
+
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

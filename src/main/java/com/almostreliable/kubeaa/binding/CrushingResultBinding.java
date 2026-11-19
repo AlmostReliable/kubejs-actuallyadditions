@@ -1,6 +1,7 @@
 package com.almostreliable.kubeaa.binding;
 
 import de.ellpeck.actuallyadditions.mod.crafting.CrushingRecipe;
+
 import net.minecraft.world.item.ItemStack;
 
 public final class CrushingResultBinding {

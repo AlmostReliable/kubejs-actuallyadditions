@@ -1,6 +1,7 @@
 package com.almostreliable.kubeaa.binding;
 
 import de.ellpeck.actuallyadditions.mod.crafting.CoffeeIngredientRecipe;
+
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;

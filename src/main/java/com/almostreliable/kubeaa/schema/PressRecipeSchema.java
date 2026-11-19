@@ -1,6 +1,7 @@
 package com.almostreliable.kubeaa.schema;
 
 import com.almostreliable.kubeaa.recipe.PressKubeRecipe;
+
 import de.ellpeck.actuallyadditions.data.MiscMachineRecipeGenerator;
 import de.ellpeck.actuallyadditions.mod.crafting.PressingRecipe;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
@@ -8,6 +9,7 @@ import dev.latvian.mods.kubejs.recipe.component.ComponentRole;
 import dev.latvian.mods.kubejs.recipe.component.FluidStackComponent;
 import dev.latvian.mods.kubejs.recipe.component.IngredientComponent;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
+
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.fluids.FluidStack;
 
