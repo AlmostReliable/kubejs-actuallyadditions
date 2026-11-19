@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - added validation for empowerer recipes with fewer than 4 modifiers
 - added validation for values that crash Actually Additions: zero empowerer, fermenter, and liquid fuel times, zero laser energy, and negative mining lens weights
+- added a warning for laser recipe results with a count above 1, the count is always 1
 - fixed the fermenter fluid ingredient being treated as an output by recipe filters and replacements
 - fixed the empower event reporting a player who took their item back off the empowerer before it was refilled
 - fixed single output crusher recipes of Actually Additions failing to parse
