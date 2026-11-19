@@ -1,5 +1,7 @@
 package com.almostreliable.kubeaa.schema;
 
+import com.almostreliable.kubeaa.recipe.EmpowererKubeRecipe;
+
 import de.ellpeck.actuallyadditions.data.EmpoweringRecipeGenerator;
 import de.ellpeck.actuallyadditions.mod.crafting.EmpowererRecipe;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
@@ -45,5 +47,5 @@ public interface EmpowererRecipeSchema {
         .optional(100)
         .alwaysWrite();
 
-    RecipeSchema SCHEMA = new RecipeSchema(RESULT, BASE, MODIFIERS, ENERGY, COLOR, TIME);
+    RecipeSchema SCHEMA = new RecipeSchema(RESULT, BASE, MODIFIERS, ENERGY, COLOR, TIME).factory(EmpowererKubeRecipe.FACTORY);
 }

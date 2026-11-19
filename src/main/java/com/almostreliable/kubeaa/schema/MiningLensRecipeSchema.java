@@ -1,5 +1,7 @@
 package com.almostreliable.kubeaa.schema;
 
+import com.almostreliable.kubeaa.recipe.MiningLensKubeRecipe;
+
 import de.ellpeck.actuallyadditions.data.MiningLensGenerator;
 import de.ellpeck.actuallyadditions.mod.crafting.MiningLensRecipe;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
@@ -28,5 +30,5 @@ public interface MiningLensRecipeSchema {
         .optional(10)
         .alwaysWrite();
 
-    RecipeSchema SCHEMA = new RecipeSchema(RESULT, INGREDIENT, WEIGHT);
+    RecipeSchema SCHEMA = new RecipeSchema(RESULT, INGREDIENT, WEIGHT).factory(MiningLensKubeRecipe.FACTORY);
 }

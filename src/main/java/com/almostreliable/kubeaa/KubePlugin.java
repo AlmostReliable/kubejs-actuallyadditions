@@ -7,8 +7,11 @@ import com.almostreliable.kubeaa.component.EffectInstanceComponent;
 import com.almostreliable.kubeaa.component.SimpleComponents;
 import com.almostreliable.kubeaa.event.EmpowerEvent;
 import com.almostreliable.kubeaa.recipe.CrusherKubeRecipe;
+import com.almostreliable.kubeaa.recipe.EmpowererKubeRecipe;
 import com.almostreliable.kubeaa.recipe.FermenterKubeRecipe;
+import com.almostreliable.kubeaa.recipe.LaserKubeRecipe;
 import com.almostreliable.kubeaa.recipe.LiquidFuelKubeRecipe;
+import com.almostreliable.kubeaa.recipe.MiningLensKubeRecipe;
 import com.almostreliable.kubeaa.recipe.PressKubeRecipe;
 import com.almostreliable.kubeaa.schema.*;
 
@@ -55,8 +58,11 @@ public class KubePlugin implements KubeJSPlugin {
     @Override
     public void registerRecipeFactories(RecipeFactoryRegistry registry) {
         registry.register(CrusherKubeRecipe.FACTORY);
+        registry.register(EmpowererKubeRecipe.FACTORY);
         registry.register(FermenterKubeRecipe.FACTORY);
+        registry.register(LaserKubeRecipe.FACTORY);
         registry.register(LiquidFuelKubeRecipe.FACTORY);
+        registry.register(MiningLensKubeRecipe.FACTORY);
         registry.register(PressKubeRecipe.FACTORY);
     }
 

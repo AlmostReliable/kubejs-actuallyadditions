@@ -1,6 +1,7 @@
 package com.almostreliable.kubeaa.schema;
 
 import com.almostreliable.kubeaa.component.SimpleComponents;
+import com.almostreliable.kubeaa.recipe.LaserKubeRecipe;
 
 import de.ellpeck.actuallyadditions.data.LaserRecipeGenerator;
 import de.ellpeck.actuallyadditions.mod.crafting.LaserRecipe;
@@ -29,5 +30,5 @@ public interface LaserRecipeSchema {
         .optional(1_000)
         .alwaysWrite();
 
-    RecipeSchema SCHEMA = new RecipeSchema(RESULT, INGREDIENT, ENERGY);
+    RecipeSchema SCHEMA = new RecipeSchema(RESULT, INGREDIENT, ENERGY).factory(LaserKubeRecipe.FACTORY);
 }
