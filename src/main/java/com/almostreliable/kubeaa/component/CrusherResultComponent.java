@@ -10,6 +10,10 @@ import dev.latvian.mods.kubejs.plugin.builtin.wrapper.ItemWrapper;
 import dev.latvian.mods.kubejs.recipe.RecipeScriptContext;
 import dev.latvian.mods.kubejs.recipe.component.RecipeComponent;
 import dev.latvian.mods.kubejs.recipe.component.RecipeComponentType;
+import dev.latvian.mods.kubejs.recipe.filter.RecipeMatchContext;
+import dev.latvian.mods.kubejs.recipe.match.ItemMatch;
+import dev.latvian.mods.kubejs.recipe.match.Replaceable;
+import dev.latvian.mods.kubejs.recipe.match.ReplacementMatchInfo;
 import dev.latvian.mods.rhino.type.TypeInfo;
 
 import net.minecraft.world.item.ItemStack;
@@ -40,6 +44,20 @@ public record CrusherResultComponent(RecipeComponentType<?> type) implements Rec
         ItemStack stack = ItemWrapper.wrap(cx.cx(), from);
 
         return stack.isEmpty() ? CrushingResult.EMPTY : CrushingResultBinding.of(stack);
+    }
+
+    @Override
+    public boolean matches(RecipeMatchContext cx, CrushingResult value, ReplacementMatchInfo match) {
+        return match.match() instanceof ItemMatch m && !value.stack().isEmpty() && m.matches(cx, value.stack(), match.exact());
+    }
+
+    @Override
+    public CrushingResult replace(RecipeScriptContext cx, CrushingResult original, ReplacementMatchInfo match, Object with) {
+        if (!matches(cx, original, match)) return original;
+
+        var replacement = ((Replaceable) (Object) original.stack()).replaceThisWith(cx, with);
+        var stack = ItemWrapper.wrap(cx.cx(), replacement);
+        return CrushingResultBinding.of(stack, original.chance());
     }
 
     @Override
