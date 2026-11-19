@@ -1,6 +1,7 @@
 package com.almostreliable.kubeaa.schema;
 
 import com.almostreliable.kubeaa.component.CrusherResultComponent;
+import com.almostreliable.kubeaa.recipe.CrusherKubeRecipe;
 
 import de.ellpeck.actuallyadditions.data.CrushingRecipeGenerator;
 import de.ellpeck.actuallyadditions.mod.crafting.CrushingRecipe;
@@ -29,5 +30,5 @@ public interface CrusherRecipeSchema {
         .key("ingredient", ComponentRole.INPUT)
         .noFunctions();
 
-    RecipeSchema SCHEMA = new RecipeSchema(RESULT, INGREDIENT);
+    RecipeSchema SCHEMA = new RecipeSchema(RESULT, INGREDIENT).factory(CrusherKubeRecipe.FACTORY);
 }

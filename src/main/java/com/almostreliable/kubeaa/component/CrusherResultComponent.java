@@ -43,6 +43,12 @@ public record CrusherResultComponent(RecipeComponentType<?> type) implements Rec
     }
 
     @Override
+    public boolean allowEmpty() {
+        // actually additions writes an empty second result for single output recipes
+        return true;
+    }
+
+    @Override
     public boolean isEmpty(CrushingResult value) {
         return value == CrushingResult.EMPTY || value.stack().isEmpty();
     }
