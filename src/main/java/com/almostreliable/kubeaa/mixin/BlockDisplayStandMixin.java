@@ -29,13 +29,28 @@ public class BlockDisplayStandMixin {
     @Final
     private boolean isEmpowerer;
 
-    @Inject(method = "useItemOn", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;isCreative()Z"))
-    private void onItemInsert(
-        ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand,
-        BlockHitResult hitResult, CallbackInfoReturnable<ItemInteractionResult> cir,
-        @Local TileEntityInventoryBase blockEntity
+    @Inject(
+        method = "useItemOn",
+        at = @At(
+            value = "INVOKE",
+            target = "Lde/ellpeck/actuallyadditions/mod/util/ItemStackHandlerAA;setStackInSlot(ILnet/minecraft/world/item/ItemStack;)V",
+            shift = At.Shift.AFTER
+        )
+    )
+    private void onStackSet(
+        ItemStack pStack,
+        BlockState pState,
+        Level world,
+        BlockPos pos,
+        Player player,
+        InteractionHand hand,
+        BlockHitResult pHitResult,
+        CallbackInfoReturnable<ItemInteractionResult> cir,
+        @Local(name = "stand") TileEntityInventoryBase blockEntity
     ) {
         if (!isEmpowerer) return;
-        ((TileEntityEmpowererExtension) blockEntity).kjsaa$setPlayer(player.getUUID());
+
+        var playerId = blockEntity.inv.getStackInSlot(0).isEmpty() ? null : player.getUUID();
+        ((TileEntityEmpowererExtension) blockEntity).kjsaa$setPlayer(playerId);
     }
 }

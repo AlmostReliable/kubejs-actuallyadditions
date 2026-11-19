@@ -23,7 +23,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.lang.ref.WeakReference;
 import java.util.UUID;
 
 @Mixin(TileEntityEmpowerer.class)
@@ -31,23 +30,35 @@ public abstract class TileEntityEmpowererMixin implements TileEntityEmpowererExt
 
     @Unique
     @Nullable
-    private WeakReference<UUID> kjsaa$player;
+    private UUID kjsaa$playerId;
 
-    @Inject(method = "serverTick", at = @At(value = "INVOKE", target = "Lde/ellpeck/actuallyadditions/mod/util/ItemStackHandlerAA;setStackInSlot(ILnet/minecraft/world/item/ItemStack;)V", shift = At.Shift.AFTER))
+    @Inject(
+        method = "serverTick",
+        at = @At(
+            value = "INVOKE",
+            target = "Lde/ellpeck/actuallyadditions/mod/util/ItemStackHandlerAA;setStackInSlot(ILnet/minecraft/world/item/ItemStack;)V",
+            shift = At.Shift.AFTER
+        )
+    )
     private static <T extends BlockEntity> void onResultSet(
-        Level level, BlockPos pos, BlockState state, T t, CallbackInfo ci, @Local RecipeHolder<EmpowererRecipe> holder
+        Level level,
+        BlockPos pos,
+        BlockState state,
+        T t,
+        CallbackInfo ci,
+        @Local(name = "holder") RecipeHolder<EmpowererRecipe> holder
     ) {
         if (level instanceof ServerLevel serverLevel && t instanceof TileEntityEmpowerer blockEntity) {
-            var be = (TileEntityEmpowererMixin) (Object) blockEntity;
-            UUID uuid = be.kjsaa$player == null ? null : be.kjsaa$player.get();
-            KubePlugin.Events.EMPOWER.post(new EmpowerEvent(serverLevel, pos, state, holder, uuid));
-            be.kjsaa$player = null;
+            var empowerer = (TileEntityEmpowererMixin) (Object) blockEntity;
+            var event = new EmpowerEvent(serverLevel, pos, state, holder, empowerer.kjsaa$playerId);
+            KubePlugin.Events.EMPOWER.post(event);
+            empowerer.kjsaa$playerId = null;
         }
     }
 
     @Override
     @Unique
-    public void kjsaa$setPlayer(UUID uuid) {
-        kjsaa$player = new WeakReference<>(uuid);
+    public void kjsaa$setPlayer(@Nullable UUID playerId) {
+        kjsaa$playerId = playerId;
     }
 }
